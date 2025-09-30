@@ -7,13 +7,21 @@ const App = () => {
   const [selectedOption, setSelectedOption] = useState("");
 
   return (
-    <div className="Parent">
+    <div className="parent">
       <h1>Parent Component</h1>
-      <ChildComponent1 selectedOption={selectedOption} setSelectedOption={setSelectedOption} />
-      <ChildComponent2 selectedOption={selectedOption} setSelectedOption={setSelectedOption} />
 
+      {/* Passing props to children */}
+      <ChildComponent1 
+        selectedOption={selectedOption} 
+        setSelectedOption={setSelectedOption} 
+      />
+      <ChildComponent2 
+        selectedOption={selectedOption} 
+        setSelectedOption={setSelectedOption} 
+      />
+
+      {/* Display selected option */}
       <p>Selected Option: {selectedOption}</p>
-
     </div>
   );
 }
